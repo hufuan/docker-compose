@@ -13,8 +13,9 @@ services:
   docker-registry-ui:
     image: konradkleine/docker-registry-frontend:v2
     container_name: docker-registry-ui
+    restart: always
     ports:
       - 8080:80
     environment:
-      ENV_DOCKER_REGISTRY_HOST: docker-registry 
+      ENV_DOCKER_REGISTRY_HOST: docker-registry-hostname
       ENV_DOCKER_REGISTRY_PORT: 5000
